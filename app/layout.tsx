@@ -5,6 +5,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Regex Visualizer — Interactive Regular Expression Tester',
   description: 'Test, debug, and visualize regular expressions with live matching, group capture, and plain-English explanations.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

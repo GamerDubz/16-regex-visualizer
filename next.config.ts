@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const repoName = "16-regex-visualizer";
+const repoName = "regex-visualizer";
 
 const nextConfig: NextConfig = {
   output: "export",
@@ -12,3 +12,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

@@ -1,13 +1,31 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
-const inter = Inter({ subsets: ['latin'] })
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-plex-sans',
+  display: 'swap',
+})
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-plex-mono',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'Regex Visualizer — Interactive Regular Expression Tester',
-  description: 'Test, debug, and visualize regular expressions with live matching, group capture, and plain-English explanations.',
+  title: 'Regex Visualizer — Interactive Regular Expression Schematic',
+  description:
+    'Test regular expressions and see their structure diagrammed live: inline match highlighting plus a railroad-style schematic of groups, alternation, and quantifiers.',
 }
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en"><body className={`${inter.className} antialiased`}>{children}</body></html>
+    <html lang="en" className={`${plexSans.variable} ${plexMono.variable}`}>
+      <body className="antialiased">{children}</body>
+    </html>
   )
 }

@@ -73,31 +73,11 @@ export default function RegexVisualizerPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#090D16] text-slate-100 font-mono selection:bg-amber-500 selection:text-black">
+    <div className="min-h-screen bg-[#0d1117] text-neutral-100 font-mono">
       <div className="max-w-6xl mx-auto p-6 md:p-8">
-        <header className="mb-6 font-sans flex items-center justify-between pb-4 border-b border-slate-800">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-red-500 p-0.5 shadow-lg shadow-amber-500/20 flex items-center justify-center">
-              <svg className="w-full h-full p-1.5" viewBox="0 0 32 32" fill="none">
-                <path d="M7 11L10 16L7 21" stroke="#E2E8F0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M25 11L22 16L25 21" stroke="#E2E8F0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 10V22M11 13L21 19M11 19L21 13" stroke="#FDE68A" strokeWidth="2.5" strokeLinecap="round"/>
-                <circle cx="16" cy="16" r="2" fill="#FFFFFF"/>
-              </svg>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                Regex Visualizer
-                <span className="text-[11px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 font-medium font-mono">
-                  Engine
-                </span>
-              </h1>
-              <p className="text-xs text-slate-400">Interactive regular expression tester with live match highlighting</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <span className="px-2 py-1 rounded bg-slate-900 border border-slate-800 text-amber-300 font-semibold">{matches.length} Matches</span>
-          </div>
+        <header className="mb-6 font-sans">
+          <h1 className="text-2xl font-bold tracking-tight mb-1">Regex Visualizer</h1>
+          <p className="text-sm text-neutral-500">Interactive regular expression tester with live match highlighting</p>
         </header>
 
         {/* Regex input */}
